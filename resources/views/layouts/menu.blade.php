@@ -60,7 +60,7 @@
             <a href="#"><i class="icon-users"></i><span>Jugadores</span><span class="fa arrow"></span></a>
             <ul class="children collapse" style="">
                <li class=""><a href="supervisores">Lista de jugadores</a></li>
-               <li class=""><a href="agentes">Nuevo Jugador</a></li>
+               <li class=""><a href="{{ url('/admin/players/create')}}">Nuevo Jugador</a></li>
             </ul>
          </li>
          <li class="tm nav-parent">
@@ -71,7 +71,7 @@
             </ul>
          </li>
          <li class="tm nav-parent">
-            <a href="#"><i class="fa fa-group"></i><span>Formulario de Resultados</span><span class="fa arrow"></span></a>
+            <a href="#"><i class="fa fa-file-text-o"></i><span>Formulario de Resultados</span><span class="fa arrow"></span></a>
             <ul class="children collapse" style="">
                <li class=""><a href="grupos">Lista de Formularios</a></li>
                <li class=""><a href="nuevo-grupo">Nuevo Formulario</a></li>

@@ -8,7 +8,9 @@ class Player extends Model
 {
     //
     protected $table = 'PLayers';
-    protected $fillable = ['name', 'birthday', 'user_id'];
+    protected $fillable = ['id_kardex','name', 'birthday', 'second_name_p', 'second_name_m', 'place_of_birth',
+    						'ci', 'nationality', 'home', 'phone', 'movil', 'profession', 'picture',
+    						'user_id'];
 
     public function user()
 	{

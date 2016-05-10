@@ -8,7 +8,7 @@
     <meta name="author" content="themes-lab">
     <link rel="shortcut icon" href="{{ asset('images/favicon.png')}}" type="image/png">
     <title>Sistema de Campeonatos</title>
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css')}}" rel="stylesheet">
     <link href="{{ asset('css/theme.css')}}" rel="stylesheet">
     <link href="{{ asset('css/ui.css')}}" rel="stylesheet">
     <script src="{{ asset('plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script>
@@ -57,36 +57,52 @@
         <!-- BEGIN PAGE CONTENT -->
         <div class="page-content">
           <div class="header">
-            <h2>Lista <strong>Paneles</strong></h2>
+            @yield('titleContent')
+            <!--<h2>Lista <strong>Paneles</strong></h2>-->
             <div class="breadcrumb-wrapper">
-              @extends('layouts.bread')
-              
-              
+              <!--@extends('layouts.bread')-->
+              <ol class="breadcrumb">
+                <li><a href="#">Make</a>
+                </li>
+                <li><a href="#">Pages</a>
+                </li>
+                <li class="active">Buttons</li>
+              </ol>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-6 portlets">
+            <div class="col-md-12 portlets">
               <div class="panel panel-default no-bd">
                 <div class="panel-header bg-dark">
-                  <h3 class="panel-title"><strong>Agregar </strong>nuevo panel</h3>
+                  @yield('titlePanel')
+                  <!--<h3 class="panel-title"><strong>Agregar </strong>nuevo panel</h3>-->
                 </div>
-                <div class="panel-body bg-white">
+                <div class="panel-content bg-white">
                   <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
-                     
+                      @yield('content')
                       
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 portlets">
-              
+          </div>
+         <!-- @extends('layouts.footer')-->
+          <div class="footer">
+            <div class="copyright">
+              <p class="pull-left sm-pull-reset">
+                <span> <span class="copyright"></span>2016</span>
+                <span>RIVER SRL</span>.
+                <span>All rights reserved. </span>
+              </p>
+              <p class="pull-right sm-pull-reset">
+                <span><a href="#" class="m-r-10">Support</a> | <a href="#" class="m-l-10 m-r-10">Terms of use</a> | <a href="#" class="m-l-10">Privacy Policy</a></span>
+              </p>
             </div>
           </div>
-          @extends('layouts.footer')
-         
         </div>
+        
         <!-- END PAGE CONTENT -->
       </div>
       <!-- END MAIN CONTENT -->
@@ -128,7 +144,7 @@
     <!-- BEGIN TABLA SCRIPT -->
     <script src="{{ asset('plugins/datatables/jquery.dataTables.min.js')}}"></script> <!-- Tables Filtering, Sorting & Editing -->
     
-    
+     @yield('scripts')
     
   </body>
 </html>

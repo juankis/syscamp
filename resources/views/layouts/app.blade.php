@@ -5,14 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Sistema de Campeonatos</title>
 
     <!-- Fonts -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
-
-    <!-- Styles -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/style.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/theme.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/ui.css')}}" rel="stylesheet">
+    <script src="{{ asset('plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script>
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
     <style>
@@ -25,7 +24,7 @@
         }
     </style>
 </head>
-<body id="app-layout">
+<body class="account" data-page="login">
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
@@ -40,14 +39,14 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Laravel
+                    Sistema de Campeonatos
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
+                  <!--  <li><a href="{{ url('/home') }}">Home</a></li>-->
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -75,8 +74,12 @@
     @yield('content')
 
     <!-- JavaScripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="{{ asset('plugins/jquery/jquery-1.11.1.min.js')}}"></script>
+    <script src="{{ asset('plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('plugins/backstretch/backstretch.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('js/login.js')}}"></script>
+
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+
 </body>
 </html>

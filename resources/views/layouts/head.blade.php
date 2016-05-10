@@ -13,7 +13,7 @@
           </div>
           <div class="header-right">
             <ul class="header-menu nav navbar-nav">
-              <!-- BEGIN USER DROPDOWN -->
+              <!-- BEGIN USER DROPDOWN 
               <li class="dropdown" id="language-header">
                 <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                 <i class="icon-globe"></i>
@@ -31,8 +31,8 @@
                   </li>
                 </ul>
               </li>
-              <!-- END USER DROPDOWN -->
-              <!-- BEGIN NOTIFICATION DROPDOWN -->
+              <END USER DROPDOWN -->
+              <!-- BEGIN NOTIFICATION DROPDOWN 
               <li class="dropdown" id="notifications-header">
                 <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                 <i class="icon-bell"></i>
@@ -110,8 +110,8 @@
                   </li>
                 </ul>
               </li>
-              <!-- END NOTIFICATION DROPDOWN -->
-              <!-- BEGIN MESSAGES DROPDOWN -->
+               END NOTIFICATION DROPDOWN -->
+              <!-- BEGIN MESSAGES DROPDOWN 
               <li class="dropdown" id="messages-header">
                 <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                 <i class="icon-paper-plane"></i>
@@ -193,7 +193,7 @@
                   </li>
                 </ul>
               </li>
-              <!-- END MESSAGES DROPDOWN -->
+               END MESSAGES DROPDOWN -->
               <!-- BEGIN USER DROPDOWN -->
               <li class="dropdown" id="user-header">
                 <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
@@ -211,13 +211,14 @@
                     <a href="#"><i class="icon-settings"></i><span>Account Settings</span></a>
                   </li>
                   <li>
-                    <a href="#"><i class="icon-logout"></i><span>Logout</span></a>
+                    <a href="{{ url('/logout') }}"><i class="icon-logout"></i><span>Logout</span></a>
                   </li>
                 </ul>
               </li>
               <!-- END USER DROPDOWN -->
-              <!-- CHAT BAR ICON -->
+              <!-- CHAT BAR ICON
               <li id="quickview-toggle"><a href="#"><i class="icon-bubbles"></i></a></li>
+               CHAT BAR ICON -->
             </ul>
           </div>
           <!-- header-right -->

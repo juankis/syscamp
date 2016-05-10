@@ -12,17 +12,21 @@
 */
 
 Route::get('/', function () {
+    return view('layouts.app');
+
+});
+
+Route::get('/admin', function () {
     return view('layouts.admin');
 });
+    
 
-
-
-Route::group(['prefix' => 'jugadores'], function () {
-    Route::get('ver/{id}',[
-    	'uses' => 'PlayerController@view',
-    	'as'   => 'minombre'
-    ]);	
+Route::group(['prefix' => 'admin'], function () {
+    Route::resource('players','PlayersController');
 });
+
+Route::get('/admin/players/store/{id}','PlayersController@store');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
