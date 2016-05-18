@@ -59,7 +59,7 @@
          <li class="tm nav-parent">
             <a href="#"><i class="icon-users"></i><span>Jugadores</span><span class="fa arrow"></span></a>
             <ul class="children collapse" style="">
-               <li class=""><a href="supervisores">Lista de jugadores</a></li>
+               <li class=""><a href="{{ route('admin.players.index')}}">Lista de jugadores</a></li>
                <li class=""><a href="{{ url('/admin/players/create')}}">Nuevo Jugador</a></li>
             </ul>
          </li>

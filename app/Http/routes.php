@@ -11,21 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.app');
-
-});
-
-Route::get('/admin', function () {
-    return view('layouts.admin');
-});
-    
-
-Route::group(['prefix' => 'admin'], function () {
-    Route::resource('players','PlayersController');
-});
-
-Route::get('/admin/players/store/{id}','PlayersController@store');
 
 /*
 |--------------------------------------------------------------------------
@@ -38,12 +23,31 @@ Route::get('/admin/players/store/{id}','PlayersController@store');
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-    //
-});
+
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
     Route::get('/home', 'HomeController@index');
+
+
+	Route::get('/', function () {
+	    return view('layouts.app');
+
+	});
+
+	Route::get('/admin', function () {
+	    return view('layouts.admin');
+	});
+	    
+
+	Route::group(['prefix' => 'admin'], function () {
+	    Route::resource('players','PlayersController');
+	});
+
+	Route::get('/admin/players/store/{id}','PlayersController@store');
+	Route::get('/admin/players/{id}/destroy',[
+		'uses' => 'PlayersController@destroy',
+		'as' => 'admin.players.destroy'
+		]);
 });

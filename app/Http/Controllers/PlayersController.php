@@ -8,6 +8,13 @@ use App\Http\Requests;
 
 use App\Player;
 
+use Laracasts\Flash\Flash;
+
+use Session;
+
+use App\Http\Requests\PlayerStoreRequest;
+use App\Http\Requests\PlayerUpdateRequest;
+
 class PlayersController extends Controller
 {
     /**
@@ -38,15 +45,13 @@ class PlayersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PlayerStoreRequest $request)
     {
-        //$request = ($request->all())['user_id'];
-
-        //dd($request->all());
         $player = new Player($request->all());
         $player->user_id = 1;
         $player->save();
-        //dd($player);
+        Flash::info('El Juagador se ha creado correctamente');
+        return redirect()->route('admin.players.index');
     }
 
     /**
@@ -68,7 +73,9 @@ class PlayersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $player = Player::find($id);
+        return view('players.edit')->with('player',$player);
+        dd($id);
     }
 
     /**
@@ -78,9 +85,30 @@ class PlayersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PlayerUpdateRequest $request, $id)
     {
-        //
+        $player = Player::find($id);
+        $this->validate($request,[ 'email' => 'unique:players,email,'.$player->id ], ['email.unique' => 'El email ya esta en uso'] );
+
+        
+        $player->id_kardex = $request->id_kardex;
+        $player->name = $request->name;
+        $player->second_name_p = $request->second_name_p;
+        $player->second_name_m = $request->second_name_m;
+        $player->birthday = $request->birthday;
+        $player->place_of_birth = $request->place_of_birth;
+        $player->ci = $request->ci;
+        $player->nationality = $request->nationality;
+        $player->home = $request->home;
+        $player->phone = $request->phone;
+        $player->movil = $request->movil;
+        $player->email = $request->email;
+        $player->profession = $request->profession;
+        $player->picture = $request->picture;
+        $player->save();
+        Flash::info('El Juagador se ha editado correctamente');
+        //Session::flash('alg','noticia');
+        return redirect('/admin/players');
     }
 
     /**
@@ -91,6 +119,9 @@ class PlayersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $player = Player::find($id);
+        $player->delete();
+        Flash::info('El Juagador se ha eliminado correctamente');
+        return redirect('/admin/players')->with('success','noticia');
     }
 }

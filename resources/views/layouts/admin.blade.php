@@ -52,10 +52,12 @@
       <div class="main-content">
         <!-- BEGIN TOPBAR -->
         @extends('layouts.head')
-        
+         
+         
         <!-- END TOPBAR -->
         <!-- BEGIN PAGE CONTENT -->
         <div class="page-content">
+          @include('flash::message')
           <div class="header">
             @yield('titleContent')
             <!--<h2>Lista <strong>Paneles</strong></h2>-->
@@ -77,9 +79,20 @@
                   @yield('titlePanel')
                   <!--<h3 class="panel-title"><strong>Agregar </strong>nuevo panel</h3>-->
                 </div>
+
                 <div class="panel-content bg-white">
                   <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
+                      @if(count($errors)>0)
+
+                        <div class="alert alert-danger">Errores
+                          <ul>
+                            @foreach($errors->all() as $error)
+                              <li>{{ $error }}</li>
+                            @endforeach
+                          </ul>
+                        </div>
+                      @endif
                       @yield('content')
                       
                     </div>

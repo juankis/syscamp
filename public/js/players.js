@@ -1,0 +1,3 @@
+<script>
+$('#formJugador').valid();
+</script>

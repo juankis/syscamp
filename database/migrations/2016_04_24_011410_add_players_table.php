@@ -23,6 +23,7 @@ class AddPlayersTable extends Migration
             $table->string('ci');
             $table->string('nationality');
             $table->string('home');
+            $table->string('email');
             $table->string('phone');
             $table->string('movil');
             $table->string('profession');
