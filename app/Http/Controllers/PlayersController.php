@@ -17,6 +17,7 @@ use App\Http\Requests\PlayerUpdateRequest;
 
 class PlayersController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -47,9 +48,20 @@ class PlayersController extends Controller
      */
     public function store(PlayerStoreRequest $request)
     {
+        
+        $file = $request->file('picture');
+        $name = 'picture_player_'.time().'.'.$file->getClientOriginalExtension();
+        //CAMBIAR EN LINUX
+        $path = public_path()."\images\players\\".$name;
+        $file->move($path,$name);     
+        
+
+        
         $player = new Player($request->all());
         $player->user_id = 1;
+        $player->picture = $path;
         $player->save();
+        
         Flash::info('El Juagador se ha creado correctamente');
         return redirect()->route('admin.players.index');
     }
@@ -90,6 +102,11 @@ class PlayersController extends Controller
         $player = Player::find($id);
         $this->validate($request,[ 'email' => 'unique:players,email,'.$player->id ], ['email.unique' => 'El email ya esta en uso'] );
 
+        $file = $request->file('picture');
+        $name = 'picture_player_'.time().'.'.$file->getClientOriginalExtension();
+        //CAMBIAR EN LINUX
+        $path = public_path()."\images\players\\".$name;
+        $file->move($path,$name);
         
         $player->id_kardex = $request->id_kardex;
         $player->name = $request->name;
@@ -104,7 +121,7 @@ class PlayersController extends Controller
         $player->movil = $request->movil;
         $player->email = $request->email;
         $player->profession = $request->profession;
-        $player->picture = $request->picture;
+        $player->picture = $path;
         $player->save();
         Flash::info('El Juagador se ha editado correctamente');
         //Session::flash('alg','noticia');

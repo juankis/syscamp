@@ -11,7 +11,7 @@
 <div class="col-md-12 col-sm-12 col-xs-12">
   
   
-  	{!! Form::open(['route' => ['admin.players.update',$player], 'id'=>'formJugador', 'method' => 'PUT', 'class' => 'form-horizontal', 'role' => 'form' ]) !!}
+  	{!! Form::open(['route' => ['admin.players.update',$player], 'id'=>'formJugador', 'method' => 'PUT', 'class' => 'form-horizontal', 'role' => 'form' , 'form', 'files' => true]) !!}
   	<div class="row">
   		<div class="col-md-6 col-sm-6 col-xs-6">
   			<div class="form-group">
@@ -128,8 +128,16 @@
 		      <label class="col-sm-3 control-label">Foto<span class="text-danger">*</span>
 		      </label>
 		      <div class="col-sm-9 prepend-icon">
-		        <input type="text" name="picture" value="{{$player->picture}}" class="form-control" placeholder="Introduce tu foto..." >
-		        <i class="icon-user"></i>
+		        <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control" data-trigger="fileinput">
+                      <i class="glyphicon glyphicon-file fileinput-exists"></i><span class="fileinput-filename"></span>
+                    </div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Elegir...</span><span class="fileinput-exists">Cambiar</span>
+                    {!! Form::file('picture') !!}
+                    </span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Eliminar</a>
+                  	</div>
+			      	<i class="icon-user"></i>
 		      </div>
 		    </div>
   		</div>

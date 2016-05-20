@@ -55,6 +55,8 @@ class PlayerStoreRequest extends Request
             'email.unique' => 'El Email ya esta en uso',
             'profession.required' => 'El campo Profesion deberia ser solo texto',
             'picture.required' => 'El campo Fotografia es requerido'
+            //'picture.image' => 'El archivo subido debe ser una imagen'
+
         ];
         
     }
