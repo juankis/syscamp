@@ -53,8 +53,8 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
+                        <li><a href="{{ url('/login') }}">Autenticarse</a></li>
+                        <!--<li><a href="{{ url('/register') }}">Register</a></li>-->
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -77,6 +77,7 @@
     <script src="{{ asset('plugins/jquery/jquery-1.11.1.min.js')}}"></script>
     <script src="{{ asset('plugins/bootstrap/js/bootstrap.min.js')}}"></script>
     <script src="{{ asset('plugins/backstretch/backstretch.min.js')}}"></script>
+    <script src="{{asset('plugins/jquery-validation/src/localization/messages_es.js')}}"></script>
     <script type="text/javascript" src="{{ asset('js/login.js')}}"></script>
 
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}

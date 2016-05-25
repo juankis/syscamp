@@ -132,8 +132,7 @@
                       <i class="glyphicon glyphicon-file fileinput-exists"></i><span class="fileinput-filename"></span>
                     </div>
                     <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Elegir...</span><span class="fileinput-exists">Cambiar</span>
-                    <?php echo Form::file('picture'); ?>
-
+                    <input type="file" name="picture" value="<?php echo e($player->picture); ?>" required>
                     </span>
                     <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Eliminar</a>
                   	</div>
@@ -146,8 +145,8 @@
     <div class="row">
       <div class="col-sm-9 col-sm-offset-3">
         <div class="pull-right">
-          <button type="submit" class="btn btn-embossed btn-primary m-r-20">Send my Comment</button>
-          <button type="reset" class="cancel btn btn-embossed btn-default m-b-10 m-r-0">Cancel</button>
+          <button type="submit" class="btn btn-embossed btn-primary m-r-20">Guardar Cambios</button>
+          <button type="reset" class="cancel btn btn-embossed btn-default m-b-10 m-r-0">Cancelar</button>
         </div>
       </div>
     </div>

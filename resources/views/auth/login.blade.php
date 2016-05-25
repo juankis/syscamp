@@ -13,7 +13,7 @@
                             
 
                             <div class="col-md-12">
-                                <input type="email" class="form-control" placeholder="email" name="email" value="{{ old('email') }}">
+                                <input type="email" class="form-control" placeholder="Correo electronico .." name="email" value="{{ old('email') }}">
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -27,7 +27,7 @@
                             
 
                             <div class="col-md-12">
-                                <input type="password" class="form-control" placeholder="Password" name="password">
+                                <input type="password" class="form-control" placeholder="Contrase&ntilde;a ..." name="password">
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -41,7 +41,7 @@
                             <div class="col-md-6 col-md-offset-4">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" name="remember"> Remember Me
+                                        <input type="checkbox" name="remember"> Recordar
                                     </label>
                                 </div>
                             </div>
@@ -50,7 +50,7 @@
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-btn fa-sign-in"></i>Login
+                                    <i class="fa fa-btn fa-sign-in"></i>Autenticarse
                                 </button>
 
                                 <!--<a class="btn btn-link" href="{{ url('/password/reset') }}">Forgot Your Password?</a>-->
@@ -62,9 +62,11 @@
                 </div>
             </div>
             <p class="account-copyright">
-                <span>Copyright © 2016  </span><span>Centralita</span>.<span> All rights reserved.</span>
+                <span> <span class="copyright"></span>2016</span>
+                <span>RIVER SRL</span>.
+                <span>Todos los derechos reservados. </span>
             </p>
             
         </div>
-
+<script src="{{asset('plugins/jquery-validation/src/localization/messages_es.js')}}"></script>
 @endsection

@@ -15,7 +15,7 @@ class PlayerStoreRequest extends Request
     public function rules()
     {
         return [
-            'id_kardex' => 'required|numeric',
+            'id_kardex' => 'required|numeric|unique:players,id_kardex',
             'name' => 'required',
             'second_name_p' => 'required',
             'second_name_m' => 'required',
@@ -23,7 +23,7 @@ class PlayerStoreRequest extends Request
             'place_of_birth' => 'required',
             'ci' => 'required|numeric',
             'nationality' => 'required',
-            'home' => 'required',
+            //'home' => 'required',
             'phone' => 'numeric',
             //'movil' => 'required',
             'email' => 'required|unique:players,email',
@@ -38,6 +38,7 @@ class PlayerStoreRequest extends Request
         return [
             'id_kardex.required' => 'El campo Id Kardex es requerido',
             'id_kardex.numeric' => 'El campo Id Kardex deberia ser numerico',
+            'id_kardex.unique' => 'El Id Kardex ya esta en uso',
             'name.required' => 'El campo Nombre es requerido',
             'second_name_p.required' => 'El campo Apellido paterno es requerido',
             'second_name_m.required' => 'El campo Apellido Materno es requerido',
@@ -47,7 +48,7 @@ class PlayerStoreRequest extends Request
             'ci.required' => 'El campo CI es requerido',
             'ci.numeric' => 'El campo CI deberia ser nuemerico',
             'nationality.required' => 'El campo Nacionalidad es requerido',
-            'home.required' => 'El campo Domicilio es requerido',
+            ///'home.required' => 'El campo Domicilio es requerido',
             //'phone.required' => 'El campo Telefono es requerido',
             'phone.numeric' => 'El campo Telefono deberia ser numerico',
             //'movil.required' => 'El campo Celular es requerido',

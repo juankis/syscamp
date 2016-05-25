@@ -53,8 +53,8 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     <?php if(Auth::guest()): ?>
-                        <li><a href="<?php echo e(url('/login')); ?>">Login</a></li>
-                        <li><a href="<?php echo e(url('/register')); ?>">Register</a></li>
+                        <li><a href="<?php echo e(url('/login')); ?>">Autenticarse</a></li>
+                        <!--<li><a href="<?php echo e(url('/register')); ?>">Register</a></li>-->
                     <?php else: ?>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -77,6 +77,7 @@
     <script src="<?php echo e(asset('plugins/jquery/jquery-1.11.1.min.js')); ?>"></script>
     <script src="<?php echo e(asset('plugins/bootstrap/js/bootstrap.min.js')); ?>"></script>
     <script src="<?php echo e(asset('plugins/backstretch/backstretch.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('plugins/jquery-validation/src/localization/messages_es.js')); ?>"></script>
     <script type="text/javascript" src="<?php echo e(asset('js/login.js')); ?>"></script>
 
     <?php /* <script src="<?php echo e(elixir('js/app.js')); ?>"></script> */ ?>

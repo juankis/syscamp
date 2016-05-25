@@ -62,14 +62,14 @@
             @yield('titleContent')
             <!--<h2>Lista <strong>Paneles</strong></h2>-->
             <div class="breadcrumb-wrapper">
-              <!--@extends('layouts.bread')-->
+              <!--@extends('layouts.bread')
               <ol class="breadcrumb">
                 <li><a href="#">Make</a>
                 </li>
                 <li><a href="#">Pages</a>
                 </li>
                 <li class="active">Buttons</li>
-              </ol>
+              </ol>-->
             </div>
           </div>
           <div class="row">
@@ -101,16 +101,15 @@
               </div>
             </div>
           </div>
-         <!-- @extends('layouts.footer')-->
           <div class="footer">
             <div class="copyright">
               <p class="pull-left sm-pull-reset">
                 <span> <span class="copyright"></span>2016</span>
                 <span>RIVER SRL</span>.
-                <span>All rights reserved. </span>
+                <span>Todos los derechos reservados. </span>
               </p>
               <p class="pull-right sm-pull-reset">
-                <span><a href="#" class="m-r-10">Support</a> | <a href="#" class="m-l-10 m-r-10">Terms of use</a> | <a href="#" class="m-l-10">Privacy Policy</a></span>
+                <span><a href="#" class="m-r-10">Soporte</a> | <a href="#" class="m-l-10 m-r-10">Terminos de uso</a> | <a href="#" class="m-l-10">Politicas de Privacidad</a></span>
               </p>
             </div>
           </div>

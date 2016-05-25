@@ -202,16 +202,16 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a href="#"><i class="icon-user"></i><span>My Profile</span></a>
+                    <a href="#"><i class="fa fa-money"></i><span>Cuentas Pendientes</span></a>
                   </li>
-                  <li>
+                  <!--<li>
                     <a href="#"><i class="icon-calendar"></i><span>My Calendar</span></a>
+                  </li>-->
+                  <li>
+                    <a href="#"><i class="icon-settings"></i><span>Ajustes de Usuario</span></a>
                   </li>
                   <li>
-                    <a href="#"><i class="icon-settings"></i><span>Account Settings</span></a>
-                  </li>
-                  <li>
-                    <a href="<?php echo e(url('/logout')); ?>"><i class="icon-logout"></i><span>Logout</span></a>
+                    <a href="<?php echo e(url('/logout')); ?>"><i class="icon-logout"></i><span>Salir</span></a>
                   </li>
                 </ul>
               </li>

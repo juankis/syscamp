@@ -27,11 +27,11 @@
          </div>
       </div>
       <div class="menu-title">
-         <span>Navigation</span> 
+         <span>Navegacion</span> 
       </div>
       <ul class="nav nav-sidebar">
          <li class="tm nav-active nav-parent">
-            <a href="dashboard.php"><i class="icon-home"></i><span>Dashboard</span></a>
+            <a href="dashboard.php"><i class="icon-home"></i><span>Inicio</span></a>
             <ul class="children collapse" style=""></ul>
          </li>
          

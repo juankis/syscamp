@@ -129,13 +129,14 @@
 		    	<label class="col-sm-3 control-label">Foto<span class="text-danger">*</span>
 		      	</label>
 			    <div class="col-sm-9 prepend-icon">
-		    		<div class="fileinput fileinput-new input-group" data-provides="fileinput">
+		    		<div class="fileinput fileinput-new input-group" data-provides="fileinput" required>
                     <div class="form-control" data-trigger="fileinput">
                       <i class="glyphicon glyphicon-file fileinput-exists"></i><span class="fileinput-filename"></span>
                     </div>
                     <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Elegir...</span><span class="fileinput-exists">Cambiar</span>
-                    {!! Form::file('picture') !!}
+                    <input type="file" name="picture" required>
                     </span>
+
                     <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Eliminar</a>
                   	</div>
 			      	<i class="icon-user"></i>
@@ -147,7 +148,7 @@
     <div class="row">
       <div class="col-sm-9 col-sm-offset-3">
         <div class="pull-right">
-          <button type="submit" class="btn btn-embossed btn-primary m-r-20">Guardar/button>
+          <button type="submit" class="btn btn-embossed btn-primary m-r-20">Guardar</button>
           <button type="reset" class="cancel btn btn-embossed btn-default m-b-10 m-r-0">Cancelar</button>
         </div>
       </div>
