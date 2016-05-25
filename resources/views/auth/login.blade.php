@@ -27,7 +27,7 @@
                             
 
                             <div class="col-md-12">
-                                <input type="password" class="form-control" placeholder="Contrase&ntilde;a ..." name="password">
+                                <input type="password" class="form-control" placeholder="Contrase&ntilde;a .." name="password">
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -68,5 +68,5 @@
             </p>
             
         </div>
-<script src="{{asset('plugins/jquery-validation/src/localization/messages_es.js')}}"></script>
+
 @endsection

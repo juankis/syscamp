@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
+use App\Player;
 
 class PlayerUpdateRequest extends Request
 {
@@ -22,9 +23,10 @@ class PlayerUpdateRequest extends Request
      * @return array
      */
     public function rules()
-    {
+    {   
+        $player = PLayer::find($this->players);
         return [
-            'id_kardex' => 'required|numeric',
+            'id_kardex' => 'required|numeric|unique:players,id_kardex,'.$player->id,
             'name' => 'required',
             'second_name_p' => 'required',
             'second_name_m' => 'required',
@@ -35,9 +37,9 @@ class PlayerUpdateRequest extends Request
             //'home' => 'required',
             'phone' => 'numeric',
             //'movil' => 'required',
-            //'email' => 'required|unique:players,email,'.$player->id,
-            'profession' => 'string',
-            'picture' => 'required'
+            'email' => 'required|unique:players,email,'.$player->id,
+            'profession' => 'string'
+            //'picture' => 'required'
         ];
     }
 

@@ -103,25 +103,17 @@ class PlayersController extends Controller
         $this->validate($request,[ 'email' => 'unique:players,email,'.$player->id ], ['email.unique' => 'El email ya esta en uso'] );
 
         $file = $request->file('picture');
-        $name = 'picture_player_'.time().'.'.$file->getClientOriginalExtension();
-        //CAMBIAR EN LINUX
-        $path = "images\players";
-        $file->move($path,$name);
+        if($file != ''){
+            $name = 'picture_player_'.time().'.'.$file->getClientOriginalExtension();
+            $path = "images\players";
+            $file->move($path,$name);
+            $picture = $path. DIRECTORY_SEPARATOR .$name;    
+        }else{
+            $picture = $player->picture;
+        }
         
-        $player->id_kardex = $request->id_kardex;
-        $player->name = $request->name;
-        $player->second_name_p = $request->second_name_p;
-        $player->second_name_m = $request->second_name_m;
-        $player->birthday = $request->birthday;
-        $player->place_of_birth = $request->place_of_birth;
-        $player->ci = $request->ci;
-        $player->nationality = $request->nationality;
-        $player->home = $request->home;
-        $player->phone = $request->phone;
-        $player->movil = $request->movil;
-        $player->email = $request->email;
-        $player->profession = $request->profession;
-        $player->picture = $path. DIRECTORY_SEPARATOR .$name;
+        $player->fill($request->all());
+        $player->picture = $picture;
         $player->save();
         Flash::info('El Juagador se ha editado correctamente');
         //Session::flash('alg','noticia');

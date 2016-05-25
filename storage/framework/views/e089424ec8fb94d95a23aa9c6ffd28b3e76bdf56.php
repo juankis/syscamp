@@ -9,6 +9,8 @@
 <div class="col-md-12 col-sm-12 col-xs-12">
   	<?php echo Form::open(['route' => 'admin.players.store', 'id'=>'formJugador', 'method' => 'POST', 'class' => 'form-horizontal', 'role' => 'form', 'files' => true ]); ?>
 
+  	<?php echo csrf_field(); ?>
+
   	<div class="row">
   		<div class="col-md-6 col-sm-6 col-xs-6">
   			<div class="form-group">
@@ -125,8 +127,8 @@
 		    <div class="form-group">
 		    	<label class="col-sm-3 control-label">Foto<span class="text-danger">*</span>
 		      	</label>
-			    <div class="col-sm-9 prepend-icon">
-			    	<input type="file" name="picture" value="este.jpg" required>
+			    <div class="col-sm-9">
+			    	<input type="file" name="picture" class="filestyle" data-classButton="btn btn-primary" data-input="false" data-classIcon="icon-plus" data-buttonText="Selecciona una imagen" required>
 			    </div>
 		    </div>
   		</div>
@@ -157,6 +159,7 @@
 <script src="<?php echo e(asset('plugins/jquery-validation/jquery.validate.js')); ?>"></script>
 <script src="<?php echo e(asset('plugins/jquery-validation/additional-methods.min.js')); ?>"></script>
 <script src="<?php echo e(asset('plugins/jquery-validation/src/localization/messages_es.js')); ?>"></script>
+<script src="<?php echo e(asset('plugins/bootstrap-filestyle-1.2.1/src/bootstrap-filestyle.min.js')); ?>"></script>
 
 <script>
 $(document).ready(function() {

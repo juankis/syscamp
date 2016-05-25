@@ -26,7 +26,7 @@
                             
 
                             <div class="col-md-12">
-                                <input type="password" class="form-control" placeholder="Contrase&ntilde;a ..." name="password">
+                                <input type="password" class="form-control" placeholder="Contrase&ntilde;a .." name="password">
 
                                 <?php if($errors->has('password')): ?>
                                     <span class="help-block">
@@ -67,7 +67,7 @@
             </p>
             
         </div>
-<script src="<?php echo e(asset('plugins/jquery-validation/src/localization/messages_es.js')); ?>"></script>
+
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

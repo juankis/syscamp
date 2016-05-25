@@ -77,7 +77,7 @@
     <script src="{{ asset('plugins/jquery/jquery-1.11.1.min.js')}}"></script>
     <script src="{{ asset('plugins/bootstrap/js/bootstrap.min.js')}}"></script>
     <script src="{{ asset('plugins/backstretch/backstretch.min.js')}}"></script>
-    <script src="{{asset('plugins/jquery-validation/src/localization/messages_es.js')}}"></script>
+    <script src="{{asset('plugins/jquery-validation/src/localization/messages_es.js')}}"></script>  
     <script type="text/javascript" src="{{ asset('js/login.js')}}"></script>
 
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
