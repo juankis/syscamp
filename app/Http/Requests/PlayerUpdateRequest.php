@@ -24,7 +24,7 @@ class PlayerUpdateRequest extends Request
     public function rules()
     {
         return [
-            'id_kardex' => 'required|numeric|unique:players,id_kardex',
+            'id_kardex' => 'required|numeric',
             'name' => 'required',
             'second_name_p' => 'required',
             'second_name_m' => 'required',

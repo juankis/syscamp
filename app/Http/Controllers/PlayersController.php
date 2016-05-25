@@ -52,14 +52,14 @@ class PlayersController extends Controller
         $file = $request->file('picture');
         $name = 'picture_player_'.time().'.'.$file->getClientOriginalExtension();
         //CAMBIAR EN LINUX
-        $path = public_path()."\images\players\\".$name;
+        $path = "images\players";
         $file->move($path,$name);     
         
 
         
         $player = new Player($request->all());
         $player->user_id = 1;
-        $player->picture = $path;
+        $player->picture = $path. DIRECTORY_SEPARATOR .$name;
         $player->save();
         
         Flash::info('El Juagador se ha creado correctamente');
@@ -105,7 +105,7 @@ class PlayersController extends Controller
         $file = $request->file('picture');
         $name = 'picture_player_'.time().'.'.$file->getClientOriginalExtension();
         //CAMBIAR EN LINUX
-        $path = public_path()."\images\players\\".$name;
+        $path = "images\players";
         $file->move($path,$name);
         
         $player->id_kardex = $request->id_kardex;
@@ -121,7 +121,7 @@ class PlayersController extends Controller
         $player->movil = $request->movil;
         $player->email = $request->email;
         $player->profession = $request->profession;
-        $player->picture = $path;
+        $player->picture = $path. DIRECTORY_SEPARATOR .$name;
         $player->save();
         Flash::info('El Juagador se ha editado correctamente');
         //Session::flash('alg','noticia');

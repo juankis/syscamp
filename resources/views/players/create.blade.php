@@ -129,17 +129,7 @@
 		    	<label class="col-sm-3 control-label">Foto<span class="text-danger">*</span>
 		      	</label>
 			    <div class="col-sm-9 prepend-icon">
-		    		<div class="fileinput fileinput-new input-group" data-provides="fileinput" required>
-                    <div class="form-control" data-trigger="fileinput">
-                      <i class="glyphicon glyphicon-file fileinput-exists"></i><span class="fileinput-filename"></span>
-                    </div>
-                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Elegir...</span><span class="fileinput-exists">Cambiar</span>
-                    <input type="file" name="picture" required>
-                    </span>
-
-                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Eliminar</a>
-                  	</div>
-			      	<i class="icon-user"></i>
+			    	<input type="file" name="picture" value="este.jpg" required>
 			    </div>
 		    </div>
   		</div>
