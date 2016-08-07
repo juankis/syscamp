@@ -39,15 +39,30 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('/admin', function () {
 	    return view('layouts.admin');
 	});
-	    
+	//LEAGUES 
 
+	Route::group(['prefix' => 'admin'], function () {
+	    Route::resource('leagues','LeaguesController');
+	});
+
+	Route::get('/admin/leagues/{id}/destroy',[
+		'uses' => 'LeaguesController@destroy',
+		'as' => 'admin.leagues.destroy'
+		]);
+
+	//END LEAGUES
+
+	//PLAYERS
 	Route::group(['prefix' => 'admin'], function () {
 	    Route::resource('players','PlayersController');
 	});
 
 	Route::get('/admin/players/store/{id}','PlayersController@store');
+
 	Route::get('/admin/players/{id}/destroy',[
 		'uses' => 'PlayersController@destroy',
 		'as' => 'admin.players.destroy'
 		]);
+
+	//END PLAYERS
 });
