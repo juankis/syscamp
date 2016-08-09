@@ -39,8 +39,8 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('/admin', function () {
 	    return view('layouts.admin');
 	});
-	//LEAGUES 
 
+	//LEAGUES 
 	Route::group(['prefix' => 'admin'], function () {
 	    Route::resource('leagues','LeaguesController');
 	});
@@ -65,4 +65,15 @@ Route::group(['middleware' => 'web'], function () {
 		]);
 
 	//END PLAYERS
+
+	//CLUBS
+	Route::group(['prefix' => 'admin'], function () {
+	    Route::resource('clubs','clubsController');
+	});
+	
+	Route::get('/admin/clubs/{id}/destroy',[
+		'uses' => 'clubsController@destroy',
+		'as' => 'admin.clubs.destroy'
+	]);
+	//END CLUBS
 });
