@@ -28,12 +28,19 @@ class AddPlayersTable extends Migration
             $table->string('movil');
             $table->string('profession');
             $table->string('picture');
-            $table->timestamps();
+            
+
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')
                   ->references('id')->on('users')
                   ->onDelete('cascade');
-                  
+
+            $table->integer('categorie_id')->unsigned();
+            $table->foreign('categorie_id')
+                  ->references('id')->on('categories')
+                  ->onDelete('cascade');     
+
+            $table->timestamps();             
         });
     }
 

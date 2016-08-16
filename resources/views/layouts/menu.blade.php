@@ -45,15 +45,15 @@
          <li class="tm nav-parent">
             <a href=""><i class="fa fa-bell-o"></i><span>Campeonatos</span> <span class="fa arrow"></span></a>
             <ul class="children collapse" style="">
-               <li class=""><a href="campanias">Lista de Campeonatos</a></li>
-               <li class=""><a href="nueva-campania-simple">Nuevo Campeonato</a></li>
+               <li class=""><a href="{{ route('admin.leagues.index')}}">Lista de Campeonatos</a></li>
+               <li class=""><a href="{{ url('/admin/leagues/create')}}">Nuevo Campeonato</a></li>
            </ul>
          </li>
          <li class="tm nav-parent" style="position: relative; opacity: 1; z-index: 0;">
-            <a href=""><i class="fa fa-phone"></i><span>Equipos</span> <span class="fa arrow"></span></a>
+            <a href=""><i class="fa fa-phone"></i><span>Clubs</span> <span class="fa arrow"></span></a>
             <ul class="children collapse" style="">
-               <li class="" style="opacity: 1; z-index: 0;"><a href="llamadas">Lista de Equipos</a></li>
-               <li class=""><a href="llamadas-en-curso">Nuevo Equipo</a></li>
+               <li class="" style="opacity: 1; z-index: 0;"><a href="{{ route('admin.clubs.index')}}">Lista de Clubs</a></li>
+               <li class=""><a href="{{ url('/admin/clubs/create')}}">Nuevo Club</a></li>
             </ul>
          </li>
          <li class="tm nav-parent">
@@ -64,10 +64,10 @@
             </ul>
          </li>
          <li class="tm nav-parent">
-            <a href="#"><i class="fa fa-group"></i><span>Supervisores</span><span class="fa arrow"></span></a>
+            <a href="#"><i class="fa fa-group"></i><span>Categorias</span><span class="fa arrow"></span></a>
             <ul class="children collapse" style="">
-               <li class=""><a href="grupos">Lista de supervisores</a></li>
-               <li class=""><a href="nuevo-grupo">Nuevo Supervisor</a></li>
+               <li class=""><a href="{{ route('admin.categories.index')}}">Lista de Categorias</a></li>
+               <li class=""><a href="{{ url('/admin/categories/create')}}">Nueva Categoria</a></li>
             </ul>
          </li>
          <li class="tm nav-parent">

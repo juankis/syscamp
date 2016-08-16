@@ -29,10 +29,7 @@ class AddClubsTable extends Migration
             $table->string('general_secretary');
             $table->string('delegate_holder');
             $table->timestamps();
-            $table->integer('league_id')->unsigned();
-            $table->foreign('league_id')
-                  ->references('id')->on('leagues')
-                  ->onDelete('cascade');
+            
         });
     }
 

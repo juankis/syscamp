@@ -17,7 +17,7 @@
           <label class="col-sm-3 control-label">ID Club<span class="text-danger">*</span>
           </label>
           <div class="col-sm-9 prepend-icon">
-            <input type="number" name="id_kardex" class="form-control" placeholder="Minimo 3 caracteres ..." minlength="3" required>
+            <input type="text" name="id_club" class="form-control" placeholder="Minimo 3 caracteres ..." minlength="3" required>
             <i class="icon-user"></i>
           </div>
         </div>
@@ -49,7 +49,7 @@
           <label class="col-sm-3 control-label">Fijo
           </label>
           <div class="col-sm-9 prepend-icon">
-            <input type="text" name="fijo" class="form-control" placeholder="Minimo 3 caracteres ..." minlength="3" >
+            <input type="number" name="fijo" class="form-control" placeholder="Minimo 3 caracteres ..." minlength="3" >
             <i class="icon-user"></i>
           </div>
         </div>
@@ -57,7 +57,7 @@
           <label class="col-sm-3 control-label">Movil<span class="text-danger">*</span>
           </label>
           <div class="col-sm-9 prepend-icon">
-            <input type="text" name="movil" class="form-control" placeholder="Minimo 3 caracteres ..." minlength="3" required>
+            <input type="number" name="movil" class="form-control" placeholder="Minimo 3 caracteres ..." minlength="3" required>
             <i class="fa-flag-or"></i>
           </div>
         </div>
@@ -65,26 +65,26 @@
           <label class="col-sm-3 control-label">facebook<span class="text-danger">*</span>
           </label>
           <div class="col-sm-9 prepend-icon">
-            <input type="number" name="facebook" class="form-control" placeholder="Minimo 3 caracteres ..." minlength="3" required>
+            <input type="text" name="facebook" class="form-control" placeholder="Minimo 3 caracteres ..." minlength="3" required>
             
           </div>
         </div>
-        <div class="form-group">
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-6">
+      <div class="form-group">
           <label class="col-sm-3 control-label">Nombre Director Tecnico<span class="text-danger">*</span>
           </label>
           <div class="col-sm-9 prepend-icon">
-            <input type="number" name="dt_name" class="form-control" placeholder="Minimo 3 caracteres ..." minlength="3" required>
+            <input type="text" name="dt_name" class="form-control" placeholder="Minimo 3 caracteres ..." minlength="3" required>
           </div>
         </div>
         <div class="form-group">
           <label class="col-sm-3 control-label">Apellido Director Tecnico<span class="text-danger">*</span>
           </label>
           <div class="col-sm-9 prepend-icon">
-            <input type="number" name="dt_second_name" class="form-control" placeholder="Minimo 3 caracteres ..." minlength="3" required>
+            <input type="text" name="dt_second_name" class="form-control" placeholder="Minimo 3 caracteres ..." minlength="3" required>
           </div>
         </div>
-      </div>
-      <div class="col-md-6 col-sm-6 col-xs-6">
       <div class="form-group">
           <label class="col-sm-3 control-label">Telefono Director Tecnico
           </label>

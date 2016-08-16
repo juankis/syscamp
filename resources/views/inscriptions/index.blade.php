@@ -1,10 +1,10 @@
 @extends('layouts.admin')
 
 @section('titleContent')
-<h2>Lista <strong>Campeonatos</strong></h2>
+<h2>Lista <strong>Inscripciones</strong></h2>
 @endsection
 @section('titlePanel')
-<h3 class="panel-title"><strong>Lista </strong>Campeonato</h3>
+<h3 class="panel-title"><strong>Lista </strong>Inscripcion</h3>
 @endsection
 @section('content')
 <div class="col-md-12 col-sm-12 col-xs-12">
@@ -12,7 +12,7 @@
 		<table class="table table-hover table-dynamic">
           	<thead>
               	<tr>
-	                <th>ID Campeonato</th>
+	                <th>ID Inscripcion</th>
 	                <th>Nombre</th>
 	                <th class="text-center">Fecha Inicio</th>
 	                <th class="text-center">Fecha Fin</th>
@@ -21,10 +21,10 @@
               	</tr>
             </thead>
           	<tbody> 
-          		@foreach($leagues as $league)                 
+          		@foreach($inscriptions as $inscription)                 
           		<tr>
-	                <td>{{ $league->id }}</td>
-                  	<td>{{ $league->name }}</td>
+	                <td>{{ $inscription->id }}</td>
+                  	<td>{{ $inscription->name }}</td>
                   	<td>01-01-2016</td>
                   	<td>01-06-2016</td>
                  	<td>Juan Carlos</td>
@@ -36,13 +36,10 @@
                         	</button>
 	                        <ul class="dropdown-menu">
 	                          <li>
-                              <a href="{{ route('admin.inscriptions.templeate', $league->id)}}"><i class="glyphicon glyphicon-edit"></i><span>Agregar Club</span></a>
-                            </li>
-	                          <li>
-	                            <a href="{{ route('admin.leagues.edit', $league->id)}}"><i class="glyphicon glyphicon-edit"></i><span>Editar</span></a>
+	                            <a href="{{ route('admin.inscriptions.edit', $inscription->id)}}"><i class="glyphicon glyphicon-edit"></i><span>Editar</span></a>
 	                          </li>
 	                          <li>
-	                            <a href="{{ route('admin.leagues.destroy', $league->id)}}"><i  class="glyphicon glyphicon-remove"></i><span>Borrar</span></a>
+	                            <a href="{{ route('admin.inscriptions.destroy', $inscription->id)}}"><i  class="glyphicon glyphicon-remove"></i><span>Borrar</span></a>
 	                          </li>
 	                        </ul>
                      	</div>
