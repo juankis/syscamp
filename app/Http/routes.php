@@ -76,4 +76,28 @@ Route::group(['middleware' => 'web'], function () {
 		'as' => 'admin.clubs.destroy'
 	]);
 	//END CLUBS
+
+	//CATEGORIES 
+	Route::group(['prefix' => 'admin'], function () {
+	    Route::resource('categories','CategoriesController');
+	});
+
+	Route::get('/admin/categories/{id}/destroy',[
+		'uses' => 'CategoriesController@destroy',
+		'as' => 'admin.categories.destroy'
+		]);
+
+	//END CATEGORIES 
+
+	//INSCRIPTIONS
+	Route::group(['prefix' => 'admin'], function () {
+		
+	    Route::resource('inscriptions','InscriptionsController');
+	});
+	
+	Route::get('/admin/inscriptions/{id}/destroy',[
+		'uses' => 'InscriptionsController@destroy',
+		'as' => 'admin.inscriptions.destroy'
+	]);
+	//END INSCRIPTIONS
 });
