@@ -6,6 +6,14 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\Inscription;    
+
+use App\Club;
+
+use Laracasts\Flash\Flash;
+
+use Session;
+
 class InscriptionsController extends Controller
 {
     /**
@@ -26,7 +34,9 @@ class InscriptionsController extends Controller
      */
     public function create()
     {
-        return View('inscriptions.templeate');
+        $clubs = Club::orderBy('name', 'ASC')->lists('name', 'id');
+        return View('inscriptions.templeate')
+                ->with('clubs', $clubs);
     }
 
     /**

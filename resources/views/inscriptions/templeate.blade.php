@@ -20,13 +20,10 @@
   	<div class="row">
   		<div class="col-md-6 col-sm-6 col-xs-6">
         <div class="form-group">
+
           <label class="col-sm-3 control-label">Club<span class="text-danger">*</span></label>
           <div class="col-sm-9 prepend-icon">
-            <select  name="nationality" data-type="text" class="form-control" data-search="true"  data-parsley-group="block1" required>
-                    <option value="1">Bolivia</option>
-                    <option value="2">Argentina </option>
-                    <option value="3">Brasil</option>
-            </select> 
+            {!! Form::select('clubs', $clubs, null, ['data-type'=>'text', 'class'=>'form-control', 'data-search'=>'true']) !!}
           </div>
         </div>
 		    <div class="form-group">
@@ -79,7 +76,7 @@
 <script src="{{asset('plugins/jquery-validation/additional-methods.min.js')}}"></script>
 <script src="{{asset('plugins/jquery-validation/src/localization/messages_es.js')}}"></script>
 <script src="{{asset('plugins/bootstrap-filestyle-1.2.1/src/bootstrap-filestyle.min.js')}}"></script>
-
+<script src="{{asset('plugins/select2/select2.min.js')}}"></script>
 <script>
 $(document).ready(function() {
   $("#formJugador").validate({

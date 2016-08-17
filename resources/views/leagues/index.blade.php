@@ -36,7 +36,7 @@
                         	</button>
 	                        <ul class="dropdown-menu">
 	                          <li>
-                              <a href="{{ route('admin.inscriptions.templeate', $league->id)}}"><i class="glyphicon glyphicon-edit"></i><span>Agregar Club</span></a>
+                              <a href="{{ route('admin.inscriptions.create', $league->id)}}"><i class="glyphicon glyphicon-edit"></i><span>Agregar Club</span></a>
                             </li>
 	                          <li>
 	                            <a href="{{ route('admin.leagues.edit', $league->id)}}"><i class="glyphicon glyphicon-edit"></i><span>Editar</span></a>

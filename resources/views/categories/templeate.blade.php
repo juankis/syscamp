@@ -19,7 +19,7 @@
     <div class="row">
   		<div class="col-md-6 col-sm-6 col-xs-6">
   			<div class="form-group">
-		      <label class="col-sm-3 control-label">Nombre<span class="text-danger">*</span>
+		      <label class="col-sm-3 control-label">Equipo<span class="text-danger">*</span>
 		      </label>
 		      <div class="col-sm-9 prepend-icon">
 		        <input type="text" name="name" value="{{ isset($category) ? $category->name : null }}"  class="form-control" placeholder="Minimo 3 caracteres ..." minlength="3" required>

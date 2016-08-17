@@ -44,7 +44,6 @@ class ClubsController extends Controller
     public function store(Request $request)
     {
         $club = new Club($request->all());
-        $club->league_id = 1;
         $club->save();
         
         Flash::info('El Club se ha creado correctamente');
