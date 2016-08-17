@@ -21,6 +21,36 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        DB::table('users')->insert(
+            array(
+                'id' => '1',
+                'name' => 'juan carlos ojeda gomez',
+                'email' => 'juanki.ijcog@gmail.com',
+                'password' => bcrypt('123456'),
+                'type' => 'admin' 
+            )
+        );
+
+        DB::table('users')->insert(
+            array(
+                'id' => '5',
+                'name' => 'juanki',
+                'email' => 'j_carlos1111@hotmail.com',
+                'password' => bcrypt('123456'),
+                'type' => 'member' 
+            )
+        );
+
+        DB::table('users')->insert(
+            array(
+                'id' => '6',
+                'name' => 'javier',
+                'email' => 'javier@gmail.com',
+                'password' => bcrypt('123456'),
+                'type' => 'member' 
+                )
+        );
     }
 
     /**
@@ -32,4 +62,6 @@ class CreateUsersTable extends Migration
     {
         Schema::drop('users');
     }
+
+
 }

@@ -17,6 +17,24 @@ class AddLeaguesTable extends Migration
             $table->string('name');
             $table->timestamps();
         });
+
+        DB::table('leagues')->insert(
+            array(
+                'name' => 'Campeonato de temporada 2016 - Apertura'
+            )   
+        );
+
+        DB::table('leagues')->insert(
+            array(
+                'name' => 'Campeonato de temporada 2015 - Cierre'
+            )   
+        );
+
+        DB::table('leagues')->insert(
+            array(
+                'name' => 'Campeonato de temporada 2015 - Apertura'
+            )   
+        );
     }
 
     /**

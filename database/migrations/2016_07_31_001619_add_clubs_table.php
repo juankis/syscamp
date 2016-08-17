@@ -31,6 +31,22 @@ class AddClubsTable extends Migration
             $table->timestamps();
             
         });
+
+        DB::table('clubs')->insert(
+            array(
+                'id' => '1',
+                'name' => 'Wilsterman',
+                'id_club' => '010000'
+            )
+        );
+
+        DB::table('clubs')->insert(
+            array(
+                'id' => '2',
+                'name' => 'San Jose',
+                'id_club' => '020000'
+            )
+        );
     }
 
     /**

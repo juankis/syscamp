@@ -35,13 +35,42 @@ class AddPlayersTable extends Migration
                   ->references('id')->on('users')
                   ->onDelete('cascade');
 
-            $table->integer('categorie_id')->unsigned();
-            $table->foreign('categorie_id')
+            $table->integer('category_id')->unsigned();
+            $table->foreign('category_id')
                   ->references('id')->on('categories')
+                  ->onDelete('cascade');
+
+            $table->integer('club_id')->unsigned();
+            $table->foreign('club_id')
+                  ->references('id')->on('clubs')
                   ->onDelete('cascade');     
 
             $table->timestamps();             
         });
+
+        DB::table('players')->insert(
+            array(
+                'id_kardex' => '0001',
+                'second_name_p' => 'ojeda gomez',
+                'second_name_m' => 'juan carlos',
+                'user_id' => '5',
+                'category_id' => '1',
+                'club_id' => '1'  
+            )
+        );
+
+        DB::table('players')->insert(
+            array(
+                'id_kardex' => '0002',
+                'second_name_p' => 'javier',
+                'second_name_m' => 'vasquez',
+                'user_id' => '6',
+                'category_id' => '1',
+                'club_id' => '1'  
+            )
+        );
+
+        
     }
 
     /**

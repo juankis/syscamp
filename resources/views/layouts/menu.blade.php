@@ -5,12 +5,12 @@
       <h1><a href="dashboard.html">&nbsp;</a></h1>
    </div>
    <div class="sidebar-inner">
-      <div class="sidebar-top">
+      <div class="text-center sidebar-top">
          <!--<form action="#" method="post" class="searchform" id="search-results">
             <input type="text" class="form-control" name="keyword" placeholder="Search here...">
          </form>-->
          <div class="userlogged clearfix">
-            <i class="icon icons-faces-users-01"></i>
+            <i class="fa fa-soccer-ball-o"></i>
             <div class="user-details">
                <h4></h4>
                <!--<div class="dropdown user-login">
@@ -43,28 +43,28 @@
             </ul>
          </li>-->
          <li class="tm nav-parent">
-            <a href=""><i class="fa fa-bell-o"></i><span>Campeonatos</span> <span class="fa arrow"></span></a>
+            <a href=""><i class="fa fa-flag-checkered"></i><span>Campeonatos</span> <span class="fa arrow"></span></a>
             <ul class="children collapse" style="">
                <li class=""><a href="{{ route('admin.leagues.index')}}">Lista de Campeonatos</a></li>
                <li class=""><a href="{{ url('/admin/leagues/create')}}">Nuevo Campeonato</a></li>
            </ul>
          </li>
          <li class="tm nav-parent" style="position: relative; opacity: 1; z-index: 0;">
-            <a href=""><i class="fa fa-phone"></i><span>Clubs</span> <span class="fa arrow"></span></a>
+            <a href=""><i class="fa fa-shield"></i><span>Clubs</span> <span class="fa arrow"></span></a>
             <ul class="children collapse" style="">
                <li class="" style="opacity: 1; z-index: 0;"><a href="{{ route('admin.clubs.index')}}">Lista de Clubs</a></li>
                <li class=""><a href="{{ url('/admin/clubs/create')}}">Nuevo Club</a></li>
             </ul>
          </li>
          <li class="tm nav-parent">
-            <a href="#"><i class="icon-users"></i><span>Jugadores</span><span class="fa arrow"></span></a>
+            <a href="#"><i class="fa fa-group"></i><span>Jugadores</span><span class="fa arrow"></span></a>
             <ul class="children collapse" style="">
                <li class=""><a href="{{ route('admin.players.index')}}">Lista de jugadores</a></li>
                <li class=""><a href="{{ url('/admin/players/create')}}">Nuevo Jugador</a></li>
             </ul>
          </li>
          <li class="tm nav-parent">
-            <a href="#"><i class="fa fa-group"></i><span>Categorias</span><span class="fa arrow"></span></a>
+            <a href="#"><i class="fa fa-bookmark"></i><span>Categorias</span><span class="fa arrow"></span></a>
             <ul class="children collapse" style="">
                <li class=""><a href="{{ route('admin.categories.index')}}">Lista de Categorias</a></li>
                <li class=""><a href="{{ url('/admin/categories/create')}}">Nueva Categoria</a></li>

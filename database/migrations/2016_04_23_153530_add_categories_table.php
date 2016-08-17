@@ -17,6 +17,27 @@ class AddCategoriesTable extends Migration
             $table->string('name');
             $table->timestamps();
         });
+
+        DB::table('categories')->insert(
+            array(
+                'id' => '1',
+                'name' => 'categoria A'
+            )
+        );
+
+        DB::table('categories')->insert(
+            array(
+                'id' => '2',
+                'name' => 'categoria B'
+            )
+        );
+
+        DB::table('categories')->insert(
+            array(
+                'id' => '3',
+                'name' => 'categoria C'
+            )
+        );
     }
 
     /**
