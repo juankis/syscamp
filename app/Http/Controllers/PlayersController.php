@@ -8,6 +8,10 @@ use App\Http\Requests;
 
 use App\Player;
 
+use App\Club;
+
+use App\Category;
+
 use Laracasts\Flash\Flash;
 
 use Session;
@@ -37,7 +41,10 @@ class PlayersController extends Controller
      */
     public function create()
     {
-        return View('players.create');
+        $clubs = Club::orderBy('name', 'ASC')->lists('name', 'id');
+        $categories = Category::orderBy('name', 'ASC')->lists('name', 'id');
+        return View('players.templeate')->with('clubs',$clubs)
+                                        ->with('categories',$categories);
     }
 
     /**
@@ -86,8 +93,11 @@ class PlayersController extends Controller
     public function edit($id)
     {
         $player = Player::find($id);
-        return view('players.edit')->with('player',$player);
-        dd($id);
+        $clubs = Club::orderBy('name', 'ASC')->lists('name', 'id');
+        $categories = Category::orderBy('name', 'ASC')->lists('name', 'id');
+        return view('players.templeate')->with('player',$player)
+                                        ->with('clubs',$clubs)
+                                        ->with('categories',$categories);
     }
 
     /**

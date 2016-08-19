@@ -10,7 +10,7 @@ class Player extends Model
     protected $table = 'PLayers';
     protected $fillable = ['id_kardex','name', 'birthday', 'second_name_p', 'second_name_m', 'place_of_birth',
     						'ci', 'nationality', 'home','email', 'phone', 'movil', 'profession', 'picture',
-    						'user_id', 'player_id'];
+    						'user_id', 'category_id', 'club_id'];
 
     public function user()
 	{
