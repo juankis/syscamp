@@ -11,13 +11,9 @@ class Club extends Model
     						'dt_name', 'dt_second_name', 'dt_movil', 'president', 'vice_president', 'general_secretary',
     						'delegate_holder'];
 
-    public function leagues()
-    {
-        return $this->belongsToMany('App\League');
-    }
 
-    public function categories()
+    public function players()
     {
-        return $this->belongsToMany('App\Category');
+        return $this->hasMany(Player::class);
     }
 }

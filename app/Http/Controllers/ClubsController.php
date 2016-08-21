@@ -102,4 +102,14 @@ class ClubsController extends Controller
         Flash::info('El Club se ha eliminado correctamente');
         return redirect('/admin/clubs')->with('success','noticia');
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function players($id)
+    {
+        return Club::find($id)->players;
+    }
 }
