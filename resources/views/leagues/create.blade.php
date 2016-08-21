@@ -55,7 +55,7 @@
 
 <script>
 $(document).ready(function() {
-  $("#formJugador").validate({
+  $("#formCampeonato").validate({
     lang: 'es'  // or whatever language option you have.
   });
 });
