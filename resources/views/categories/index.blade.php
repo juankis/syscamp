@@ -16,7 +16,7 @@
 	                <th>Nombre</th>
 	                <th class="text-center">Fecha Inicio</th>
 	                <th class="text-center">Fecha Fin</th>
-	                <th class="text-center">Creador</th>
+	                
 	                <th class="text-center">Acciones</th>
               	</tr>
             </thead>
@@ -25,9 +25,9 @@
           		<tr>
 	                <td>{{ $category->id }}</td>
                   	<td>{{ $category->name }}</td>
-                  	<td>01-01-2016</td>
-                  	<td>01-06-2016</td>
-                 	<td>Juan Carlos</td>
+                  	<td>{{ $category->created_at }}</td>
+                    <td>{{ $category->updated_at }}</td>
+                 	
                   	
                   	<td>
                       	<div class="text-center dropdown" id="user-header">

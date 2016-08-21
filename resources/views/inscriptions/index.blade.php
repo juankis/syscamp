@@ -13,10 +13,10 @@
           	<thead>
               	<tr>
 	                <th>ID Inscripcion</th>
-	                <th>Nombre</th>
-	                <th class="text-center">Fecha Inicio</th>
-	                <th class="text-center">Fecha Fin</th>
-	                <th class="text-center">Creador</th>
+	                
+	                <th class="text-center">Fecha Creacion</th>
+	                <th class="text-center">Fecha Actulizacion</th>
+	                
 	                <th class="text-center">Acciones</th>
               	</tr>
             </thead>
@@ -24,10 +24,9 @@
           		@foreach($inscriptions as $inscription)                 
           		<tr>
 	                <td>{{ $inscription->id }}</td>
-                  	<td>{{ $inscription->name }}</td>
-                  	<td>01-01-2016</td>
-                  	<td>01-06-2016</td>
-                 	<td>Juan Carlos</td>
+                  	<td>{{ $inscription->created_at }}</td>
+                    <td>{{ $inscription->updated_at }}</td>
+                 	
                   	
                   	<td>
                       	<div class="text-center dropdown" id="user-header">

@@ -14,9 +14,9 @@
               	<tr>
 	                <th>ID Campeonato</th>
 	                <th>Nombre</th>
-	                <th class="text-center">Fecha Inicio</th>
-	                <th class="text-center">Fecha Fin</th>
-	                <th class="text-center">Creador</th>
+	                <th class="text-center">Fecha Creacion</th>
+	                <th class="text-center">Fecha Modificacion</th>
+	                
 	                <th class="text-center">Acciones</th>
               	</tr>
             </thead>
@@ -24,10 +24,10 @@
           		@foreach($leagues as $league)                 
           		<tr>
 	                <td>{{ $league->id }}</td>
-                  	<td>{{ $league->name }}</td>
-                  	<td>01-01-2016</td>
-                  	<td>01-06-2016</td>
-                 	<td>Juan Carlos</td>
+                  <td>{{ $league->name }}</td>
+                  <td>{{ $league->created_at }}</td>
+                  <td>{{ $league->updated_at }}</td>
+                 	
                   	
                   	<td>
                       	<div class="text-center dropdown" id="user-header">
@@ -35,9 +35,6 @@
                           		<i class="glyphicon glyphicon-th-list">&nbsp;</i><span class="caret"></span>
                         	</button>
 	                        <ul class="dropdown-menu">
-	                          <li>
-                              <a href="{{ route('admin.inscriptions.create', $league->id)}}"><i class="fa fa-shield"></i><span>Agregar Club</span></a>
-                            </li>
 	                          <li>
 	                            <a href="{{ route('admin.leagues.edit', $league->id)}}"><i class="glyphicon glyphicon-edit"></i><span>Editar</span></a>
 	                          </li>
