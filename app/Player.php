@@ -21,4 +21,10 @@ class Player extends Model
     {
         return $this->belongsTo('App\Category');
     }
+
+    public function club()
+    {
+        return $this->belongsTo('App\Club');
+    }
+
 }
