@@ -20,19 +20,25 @@ class AddLeaguesTable extends Migration
 
         DB::table('leagues')->insert(
             array(
-                'name' => 'Campeonato de temporada 2016 - Apertura'
+                'name' => 'Campeonato de temporada 2016 - Apertura',
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s")
             )   
         );
 
         DB::table('leagues')->insert(
             array(
-                'name' => 'Campeonato de temporada 2015 - Cierre'
+                'name' => 'Campeonato de temporada 2015 - Cierre',
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s")
             )   
         );
 
         DB::table('leagues')->insert(
             array(
-                'name' => 'Campeonato de temporada 2015 - Apertura'
+                'name' => 'Campeonato de temporada 2015 - Apertura',
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s")
             )   
         );
     }

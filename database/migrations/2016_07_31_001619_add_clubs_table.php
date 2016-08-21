@@ -36,7 +36,9 @@ class AddClubsTable extends Migration
             array(
                 'id' => '1',
                 'name' => 'Wilsterman',
-                'id_club' => '010000'
+                'id_club' => '010000',
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s")
             )
         );
 
@@ -44,7 +46,9 @@ class AddClubsTable extends Migration
             array(
                 'id' => '2',
                 'name' => 'San Jose',
-                'id_club' => '020000'
+                'id_club' => '020000',
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s")
             )
         );
     }

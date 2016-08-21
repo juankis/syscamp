@@ -21,21 +21,27 @@ class AddCategoriesTable extends Migration
         DB::table('categories')->insert(
             array(
                 'id' => '1',
-                'name' => 'categoria A'
+                'name' => 'categoria A',
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s")
             )
         );
 
         DB::table('categories')->insert(
             array(
                 'id' => '2',
-                'name' => 'categoria B'
+                'name' => 'categoria B',
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s")
             )
         );
 
         DB::table('categories')->insert(
             array(
                 'id' => '3',
-                'name' => 'categoria C'
+                'name' => 'categoria C',
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s")
             )
         );
     }

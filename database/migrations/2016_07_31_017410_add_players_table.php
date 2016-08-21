@@ -55,7 +55,9 @@ class AddPlayersTable extends Migration
                 'second_name_m' => 'juan carlos',
                 'user_id' => '5',
                 'category_id' => '1',
-                'club_id' => '1'  
+                'club_id' => '1',
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s")  
             )
         );
 
@@ -66,7 +68,9 @@ class AddPlayersTable extends Migration
                 'second_name_m' => 'vasquez',
                 'user_id' => '6',
                 'category_id' => '1',
-                'club_id' => '1'  
+                'club_id' => '1',
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s")  
             )
         );
 
