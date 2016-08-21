@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('titleContent')
-<h2>Lista <strong>Inscripciones</strong></h2>
+<h2>Lista de <strong>Inscripciones</strong></h2>
 @endsection
 @section('titlePanel')
 <h3 class="panel-title"><strong>Lista </strong>Inscripcion</h3>

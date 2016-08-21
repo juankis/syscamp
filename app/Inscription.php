@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Inscription extends Model
 {
     protected $table = 'inscriptions';
-    protected $fillable = ['id', 'club_id', 'league_id'];
+    protected $fillable = ['id', 'club_id', 'league_id', 'category_id'];
 
 }

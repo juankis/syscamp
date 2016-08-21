@@ -6,9 +6,17 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\Inscription;    
+use App\Inscription;
+
+use App\InscriptionPlayer;    
 
 use App\Club;
+
+use App\Player;
+
+use App\Category;
+
+use App\League;
 
 use Laracasts\Flash\Flash;
 
@@ -35,8 +43,14 @@ class InscriptionsController extends Controller
     public function create()
     {
         $clubs = Club::orderBy('name', 'ASC')->lists('name', 'id');
+        $categories = Category::orderBy('name', 'ASC')->lists('name', 'id');
+        $players = PLayer::orderBy('name', 'ASC')->lists('name', 'id');
+        $leagues = League::orderBy('name', 'ASC')->lists('name', 'id');
         return View('inscriptions.templeate')
-                ->with('clubs', $clubs);
+                ->with('categories', $categories)
+                ->with('clubs', $clubs)
+                ->with('players', $players)
+                ->with('leagues', $leagues);
     }
 
     /**
@@ -48,8 +62,14 @@ class InscriptionsController extends Controller
     public function store(Request $request)
     {
         $inscription = new Inscription($request->all());
-        $inscription->league_id = 1;
         $inscription->save();
+
+        $players_ids = $request->players;
+        if(isset($players_ids))
+        foreach ($players_ids as $player_id) {
+            $inscriptionPlayer = new InscriptionPlayer(['player_id'=>$player_id, 'inscription_id'=>$inscription->id]);
+            $inscriptionPlayer->save();
+        }
         
         Flash::info('El inscription se ha creado correctamente');
         return redirect()->route('admin.inscriptions.index');
@@ -101,6 +121,20 @@ class InscriptionsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
+    {
+        $inscription = Inscription::find($id);
+        $inscription->delete();
+        Flash::info('El Inscription se ha eliminado correctamente');
+        return redirect('/admin/inscriptions')->with('success','noticia');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function playersClub($id)
     {
         $inscription = Inscription::find($id);
         $inscription->delete();

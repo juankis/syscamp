@@ -12,41 +12,39 @@
 <div class="col-md-12 col-sm-12 col-xs-12">
 
     @if( isset($inscription) )
-      {!! Form::open(['route' => ['admin.inscriptions.update', $inscription], 'method' => 'PUT', 'class' => 'form-horizontal', 'role' => 'form', 'files' => true ]) !!}
+      {!! Form::open(['route' => ['admin.inscriptions.update', $inscription], 'id'=>'formInscription','method' => 'PUT', 'class' => 'form-horizontal', 'role' => 'form', 'files' => true ]) !!}
     @else
-      {!! Form::open(['route' => 'admin.inscriptions.store', 'method' => 'POST', 'class' => 'form-horizontal', 'role' => 'form', 'files' => true ]) !!}
+      {!! Form::open(['route' => 'admin.inscriptions.store', 'id'=>'formInscription', 'method' => 'POST', 'class' => 'form-horizontal', 'role' => 'form', 'files' => true ]) !!}
     @endif  
   	
   	<div class="row">
   		<div class="col-md-6 col-sm-6 col-xs-6">
         <div class="form-group">
-
-          <label class="col-sm-3 control-label">Club<span class="text-danger">*</span></label>
+          <label class="col-sm-3 control-label">Campeonatos<span class="text-danger">*</span></label>
           <div class="col-sm-9 prepend-icon">
-            {!! Form::select('clubs', $clubs, null, ['data-type'=>'text', 'class'=>'form-control', 'data-search'=>'true']) !!}
-          </div>
-        </div>
-		    <div class="form-group">
-          <label class="col-sm-3 control-label">Categoria<span class="text-danger">*</span></label>
-          <div class="col-sm-9 prepend-icon">
-            <select  name="nationality" data-type="text" class="form-control" data-search="true"  data-parsley-group="block1" required>
-                    <option value="1">Bolivia</option>
-                    <option value="2">Argentina </option>
-                    <option value="3">Brasil</option>
-            </select> 
+            {!! Form::select('league_id', $leagues, null, ['id'=>'campeonatos', 'data-type'=>'text', 'class'=>'form-control', 'data-search'=>'true', 'data-placeholder'=>'seleccionar Campeonato', 'required']) !!} 
           </div>
         </div>
         <div class="form-group">
-          <label class="col-sm-3 control-label">Jugadores<span class="text-danger">*</span></label>
+          <label class="col-sm-3 control-label">Categoria<span class="text-danger">*</span></label>
           <div class="col-sm-9 prepend-icon">
-            <select  name="nationality" data-type="text" class="form-control" data-search="true"  data-parsley-group="block1" required>
-                    <option value="1">Bolivia</option>
-                    <option value="2">Argentina </option>
-                    <option value="3">Brasil</option>
-            </select> 
+            {!! Form::select('category_id', $categories, null, ['id'=>'categorias', 'data-type'=>'text', 'class'=>'form-control', 'data-search'=>'true', 'data-placeholder'=>'seleccionar categoria', 'required']) !!} 
           </div>
         </div>
-  		</div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Club<span class="text-danger">*</span></label>
+          <div class="col-sm-9 prepend-icon">
+            {!! Form::select('club_id', $clubs, null, ['id'=>'clubs', 'data-type'=>'text', 'class'=>'form-control', 'data-search'=>'true', 'placeholder'=>'Seleccionar Club','data-placeholder'=>'Seleccionar Club', 'required']) !!}
+          </div>
+        </div>
+		    <div class="form-group">
+          <label class="col-sm-3 control-label">Jugadores</label>
+          <div class="col-sm-9 prepend-icon">
+            {!! Form::select('players[]', $players, null, ['id'=>'players', 'data-type'=>'text', 'class'=>'form-control', 'data-search'=>'true', 'data-placeholder'=>'seleccionar jugadores', 'multiple']) !!} 
+          </div>
+          
+        </div>
+      </div>
   		<div class="col-md-6 col-sm-6 col-xs-6">
   		</div>
   	</div>
@@ -77,12 +75,20 @@
 <script src="{{asset('plugins/jquery-validation/src/localization/messages_es.js')}}"></script>
 <script src="{{asset('plugins/bootstrap-filestyle-1.2.1/src/bootstrap-filestyle.min.js')}}"></script>
 <script src="{{asset('plugins/select2/select2.min.js')}}"></script>
+
+
+<script src="{{asset('js/saltinmania.js')}}"></script>
 <script>
+
 $(document).ready(function() {
-  $("#formJugador").validate({
+  $('#players').empty();
+  $("#formInscriptio").validate({
     lang: 'es'  // or whatever language option you have.
   });
+   pullItemsSelect('clubs', 'players', '/admin/club/players/');
 });
+
+
 
 </script>
 @endsection

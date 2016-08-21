@@ -71,17 +71,24 @@
             </ul>
          </li>
          <li class="tm nav-parent">
-            <a href="#"><i class="fa fa-file-text-o"></i><span>Formulario de Resultados</span><span class="fa arrow"></span></a>
+            <a href="#"><i class="fa fa-file-text-o"></i><span>Inscripciones</span><span class="fa arrow"></span></a>
             <ul class="children collapse" style="">
-               <li class=""><a href="grupos">Lista de Formularios</a></li>
-               <li class=""><a href="nuevo-grupo">Nuevo Formulario</a></li>
+               <li class=""><a href="{{ route('admin.inscriptions.index')}}">Lista de Inscripciones</a></li>
+               <li class=""><a href="{{ route('admin.inscriptions.create')}}">Nueva Inscripcion</a></li>
+            </ul>
+         </li>
+         <li class="tm nav-parent">
+            <a href="#"><i class="fa fa-file-text-o"></i><span>Resultados</span><span class="fa arrow"></span></a>
+            <ul class="children collapse" style="">
+               <li class=""><a href="{{ url('/admin/enConstruccion')}}">Lista de Formularios</a></li>
+               <li class=""><a href="{{ url('/admin/enConstruccion')}}">Nuevo Formulario</a></li>
             </ul>
          </li>
          <li class="tm nav-parent" style="position: relative; opacity: 1; z-index: 0;">
             <a href=""><i class="fa fa-bar-chart-o"></i><span>Reportes</span> <span class="fa arrow"></span></a>
             <ul class="children collapse" style="">
-               <li class=""><a href="lista-negra">Reporte 1</a></li>
-               <li class=""><a href="telefonos-provincias">Reporte 2</a></li>
+               <li class=""><a href="{{ url('/admin/enConstruccion')}}">Reporte 1</a></li>
+               <li class=""><a href="{{ url('/admin/enConstruccion')}}">Reporte 2</a></li>
                
             </ul>
          </li>        

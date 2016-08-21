@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Inscription_player extends Model
+class InscriptionPlayer extends Model
 {
     protected $table = 'inscription_players';
     protected $fillable = ['id', 'inscription_id', 'player_id'];

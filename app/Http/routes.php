@@ -99,5 +99,11 @@ Route::group(['middleware' => 'web'], function () {
 		'uses' => 'InscriptionsController@destroy',
 		'as' => 'admin.inscriptions.destroy'
 	]);
+
+	Route::get('/admin/club/players/{id}', 'ClubsController@players');
 	//END INSCRIPTIONS
+
+	Route::get('/admin/enConstruccion', function () {
+		 return View('enConstruccion');
+	});
 });
