@@ -11,9 +11,9 @@
 
 <div class="col-md-12 col-sm-12 col-xs-12">
   @if( isset($category) ) 
-  	{!! Form::open(['route' => ['admin.categories.update', $category], 'id'=>'formCampeonato', 'method' => 'PUT', 'class' => 'form-horizontal', 'role' => 'form', 'files' => true ]) !!}
+  	{!! Form::open(['route' => ['admin.categories.update', $category], 'id'=>'formCategory', 'method' => 'PUT', 'class' => 'form-horizontal', 'role' => 'form', 'files' => true ]) !!}
   @else
-  {!! Form::open(['route' => 'admin.categories.store', 'method' => 'POST', 'class' => 'form-horizontal', 'role' => 'form', 'files' => true ]) !!}
+  {!! Form::open(['route' => 'admin.categories.store', 'id'=>'formCategory', 'method' => 'POST', 'class' => 'form-horizontal', 'role' => 'form', 'files' => true ]) !!}
     
   @endif	
     <div class="row">
@@ -60,7 +60,7 @@
 
 <script>
 $(document).ready(function() {
-  $("#formJugador").validate({
+  $("#formCategory").validate({
     lang: 'es'  // or whatever language option you have.
   });
 });
