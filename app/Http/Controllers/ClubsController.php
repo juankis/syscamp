@@ -32,7 +32,7 @@ class ClubsController extends Controller
      */
     public function create()
     {
-        return View('clubs.create');
+        return View('clubs.templeate');
     }
 
     /**
@@ -70,7 +70,7 @@ class ClubsController extends Controller
     public function edit($id)
     {
         $club = Club::find($id);
-        return view('clubs.edit')->with('club',$club);
+        return view('clubs.templeate')->with('club',$club);
     }
 
     /**

@@ -51,11 +51,16 @@ class AddPlayersTable extends Migration
         DB::table('players')->insert(
             array(
                 'id_kardex' => '0001',
+                'name' => 'Juan Carlos',
                 'second_name_p' => 'ojeda gomez',
                 'second_name_m' => 'juan carlos',
                 'user_id' => '5',
                 'category_id' => '1',
                 'club_id' => '1',
+                'email' => 'juanki.ijcog@gmail.com',
+                'ci' => '12345345',
+                'phone' => '45454533',
+                'movil' => '794859845',
                 'created_at' => date("Y-m-d H:i:s"),
                 'updated_at' => date("Y-m-d H:i:s")  
             )
@@ -64,11 +69,52 @@ class AddPlayersTable extends Migration
         DB::table('players')->insert(
             array(
                 'id_kardex' => '0002',
-                'second_name_p' => 'javier',
-                'second_name_m' => 'vasquez',
+                'name' => 'Javier',
+                'second_name_p' => 'Vasquez',
+                'second_name_m' => 'Cruz',
                 'user_id' => '6',
+                'category_id' => '2',
+                'club_id' => '2',
+                'email' => 'javier@gmail.com',
+                'ci' => '4756755345',
+                'phone' => '43453455',
+                'movil' => '73453455',
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s")  
+            )
+        );
+
+        DB::table('players')->insert(
+            array(
+                'id_kardex' => '0003',
+                'name' => 'Ruber',
+                'second_name_p' => 'matins',
+                'second_name_m' => 'ojeda',
+                'user_id' => '5',
                 'category_id' => '1',
                 'club_id' => '1',
+                'email' => 'river@gmail.com',
+                'ci' => '65465345',
+                'phone' => '4234234243',
+                'movil' => '7546456456',
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s")  
+            )
+        );
+
+        DB::table('players')->insert(
+            array(
+                'id_kardex' => '0004',
+                'name' => 'Gabriel',
+                'second_name_p' => 'Vasquez',
+                'second_name_m' => 'Cruz',
+                'user_id' => '6',
+                'category_id' => '2',
+                'club_id' => '2',
+                'email' => 'j_carlos1111@hotmail.com',
+                'ci' => '12345345',
+                'phone' => '45234234',
+                'movil' => '745345345',
                 'created_at' => date("Y-m-d H:i:s"),
                 'updated_at' => date("Y-m-d H:i:s")  
             )

@@ -6,7 +6,7 @@
 <h2>Crear <strong>Jugadores</strong></h2>
 @endsection
 @section('titlePanel')
-<h3 class="panel-title"><strong>Crear </strong>Jugador</h3>
+<h3 class="panel-title"><strong>Jugador </strong>{{ isset($player) ? $player->name : null }}</h3>
 @endsection
 @section('content')
 

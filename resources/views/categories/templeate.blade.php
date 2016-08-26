@@ -2,10 +2,10 @@
 @extends('layouts.admin')
 
 @section('titleContent')
-<h2>Editar <strong>Categorias</strong></h2>
+<h2><strong>Categorias</strong></h2>
 @endsection
 @section('titlePanel')
-<h3 class="panel-title"><strong>Editar </strong>Categoria {{ isset($category) ? $category->name : null }}</h3>
+<h3 class="panel-title"><strong>Categoria </strong>{{ isset($category) ? $category->name : null }}</h3>
 @endsection
 @section('content')
 
@@ -23,7 +23,7 @@
 		      </label>
 		      <div class="col-sm-9 prepend-icon">
 		        <input type="text" name="name" value="{{ isset($category) ? $category->name : null }}"  class="form-control" placeholder="Minimo 3 caracteres ..." minlength="3" required>
-		        <i class="icon-user"></i>
+		        <i class="fa fa-bookmark"></i>
 		      </div>
 		    </div>
 		    

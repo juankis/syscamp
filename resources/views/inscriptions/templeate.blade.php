@@ -2,10 +2,10 @@
 @extends('layouts.admin')
 
 @section('titleContent')
-<h2>Crear <strong>Inscripciones</strong></h2>
+<h2><strong>Inscripciones</strong></h2>
 @endsection
 @section('titlePanel')
-<h3 class="panel-title"><strong>Crear </strong>Inscripcion</h3>
+<h3 class="panel-title"><strong>Inscripcion </strong>{{ isset($inscription) ? $inscription->name : null }}</h3>
 @endsection
 @section('content')
 
@@ -40,7 +40,8 @@
 		    <div class="form-group">
           <label class="col-sm-3 control-label">Jugadores</label>
           <div class="col-sm-9 prepend-icon">
-            {!! Form::select('players[]', $players, null, ['id'=>'players', 'data-type'=>'text', 'class'=>'form-control', 'data-search'=>'true', 'data-placeholder'=>'seleccionar jugadores', 'multiple']) !!} 
+            {!! Form::select('players[]', $players, null, ['id'=>'players', 'data-type'=>'text', 'class'=>'form-control', 'data-search'=>'true', 'data-placeholder'=>'    seleccionar jugadores', 'multiple']) !!} 
+            <i class="fa fa-group"></i>
           </div>
           
         </div>
