@@ -101,7 +101,7 @@ function ajaxSmartConRetornoAsincrono(url,data, formLoad, funcion, tabla)
 
 //Admin
 
-$('#passwords').on('ifChanged', function(event){
+$('#passwords_check').on('ifChanged', function(event){
         if(this.checked){
             $('#passwords').show();
             
