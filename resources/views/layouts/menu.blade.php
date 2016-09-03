@@ -78,6 +78,13 @@
             </ul>
          </li>
          <li class="tm nav-parent">
+            <a href="#"><i class="fa fa-file-text-o"></i><span>Administradores</span><span class="fa arrow"></span></a>
+            <ul class="children collapse" style="">
+               <li class=""><a href="{{ route('admin.admins.index')}}">Lista de Administradores</a></li>
+               <li class=""><a href="{{ route('admin.admins.create')}}">Nuevo Administrador</a></li>
+            </ul>
+         </li>
+         <li class="tm nav-parent">
             <a href="#"><i class="fa fa-file-text-o"></i><span>Resultados</span><span class="fa arrow"></span></a>
             <ul class="children collapse" style="">
                <li class=""><a href="{{ url('/admin/enConstruccion')}}">Lista de Formularios</a></li>

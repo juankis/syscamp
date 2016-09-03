@@ -106,4 +106,17 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('/admin/enConstruccion', function () {
 		 return View('enConstruccion');
 	});
+
+	//IADMINS
+	Route::group(['prefix' => 'admin'], function () {
+		
+	    Route::resource('admins','adminsController');
+	});
+	
+	Route::get('/admin/admins/{id}/destroy',[
+		'uses' => 'adminsController@destroy',
+		'as' => 'admin.admins.destroy'
+	]);
+	//END ADMINS
+
 });

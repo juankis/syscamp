@@ -14,8 +14,7 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('email')->unique();
+            $table->string('username')->unique();
             $table->string('password');
             $table->enum('type', ['member', 'admin'])->default('member');
             $table->rememberToken();
@@ -25,8 +24,7 @@ class CreateUsersTable extends Migration
         DB::table('users')->insert(
             array(
                 'id' => '1',
-                'name' => 'juan carlos ojeda gomez',
-                'email' => 'juanki.ijcog@gmail.com',
+                'username' => 'juanki.ijcog@gmail.com',
                 'password' => bcrypt('123456'),
                 'type' => 'admin' 
             )
@@ -35,8 +33,7 @@ class CreateUsersTable extends Migration
         DB::table('users')->insert(
             array(
                 'id' => '5',
-                'name' => 'juanki',
-                'email' => 'j_carlos1111@hotmail.com',
+                'username' => 'j_carlos1111@hotmail.com',
                 'password' => bcrypt('123456'),
                 'type' => 'member' 
             )
@@ -45,8 +42,7 @@ class CreateUsersTable extends Migration
         DB::table('users')->insert(
             array(
                 'id' => '6',
-                'name' => 'javier',
-                'email' => 'javier@gmail.com',
+                'username' => 'javier@gmail.com',
                 'password' => bcrypt('123456'),
                 'type' => 'member' 
                 )

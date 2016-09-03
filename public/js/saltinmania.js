@@ -98,3 +98,15 @@ function ajaxSmartConRetornoAsincrono(url,data, formLoad, funcion, tabla)
         }();
     return return_first;
 }
+
+//Admin
+
+$('#passwords').on('ifChanged', function(event){
+        if(this.checked){
+            $('#passwords').show();
+            
+        }else{
+            $('#passwords').hide();
+           
+        }         
+});
