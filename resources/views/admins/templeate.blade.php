@@ -17,7 +17,9 @@
     
   @endif	
     <div class="row">
-  		<div class="col-md-6 col-sm-6 col-xs-6">
+      <div class="col-md-2 col-sm-2 col-xs-2">
+      </div>
+  		<div class="col-md-7 col-sm-7 col-xs-7">
   			<div class="form-group">
 		      <label class="col-sm-3 control-label">Nombre<span class="text-danger">*</span>
 		      </label>

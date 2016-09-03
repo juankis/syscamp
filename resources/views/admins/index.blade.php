@@ -14,6 +14,7 @@
               	<tr>
 	                <th>ID Admin</th>
 	                <th>Nombre</th>
+                  <th>E-mail</th>
 	                <th>Nombre de usuario</th>
 	                <th class="text-center">Ultima actualizacion</th>
 	                <th class="text-center">Acciones</th>
@@ -24,6 +25,7 @@
           		<tr>
 	                <td>{{ $admin->id }}</td>
                   	<td>{{ $admin->name }}</td>
+                    <td>{{ $admin->email }}</td>
                   	<td>{{ $admin->user->username }}</td>
                     <td class="text-center">{{ $admin->updated_at }}</td>
                  	
