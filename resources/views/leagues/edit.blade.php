@@ -18,7 +18,7 @@
 		      </label>
 		      <div class="col-sm-9 prepend-icon">
 		        <input type="text" name="name" value="{{$league->name}}"  class="form-control" placeholder="Minimo 3 caracteres ..." minlength="3" required>
-		        <i class="fa fa-shield"></i>
+		        <i class="fa fa-flag-checkered"></i>
 		      </div>
 		    </div>
 		    
